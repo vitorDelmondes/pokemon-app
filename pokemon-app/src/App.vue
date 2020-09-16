@@ -1,16 +1,17 @@
 <template>
   <div id="app">
+    <HorizontalNavMenu />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
+import HorizontalNavMenu from "./components/horizontalNavMenu.vue";
 
 export default {
   name: "App",
   components: {
-    // HelloWorld,
+    HorizontalNavMenu,
   },
 };
 </script>

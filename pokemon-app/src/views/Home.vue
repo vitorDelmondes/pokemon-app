@@ -20,13 +20,14 @@ export default {
       pokemons: [],
     };
   },
-  async created() {},
+  async created() {
+    this.getPokemons();
+  },
   methods: {
     async getPokemons() {
       try {
-        const resp = axios.get("/cards");
-        console.log(resp);
-        // this.pokemons = resp.data;
+        const resp = await axios.get("/cards");
+        this.pokemons = resp.data.cards;
       } catch (err) {
         console.log(err);
       }
@@ -42,6 +43,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
