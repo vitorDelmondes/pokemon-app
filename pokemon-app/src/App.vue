@@ -7,6 +7,7 @@
 
 <script>
 import HorizontalNavMenu from "./components/horizontalNavMenu.vue";
+import './css/global.css';
 
 export default {
   name: "App",
@@ -15,3 +16,9 @@ export default {
   },
 };
 </script>
+
+<style>
+#app {
+  margin: 0% !important;  
+}
+</style>
