@@ -1,6 +1,17 @@
 <template>
-  <div id="app" class="logo-central">
-    <img alt="pokemon-logo" style="width: 30%; padding: 0.5%; margin-top: 5%;" src="../assets/icons/pokemon-logo.png" />
+  <div id="app">
+    <div class="logo-central">
+      <img
+        alt="pokemon-logo"
+        style="width: 30%; padding: 0.5%; margin-top: 5%;"
+        src="../assets/icons/pokemon-logo.png"
+      />
+    </div>
+    <div class="card-constainer">
+      <div v-for="item of pokemons" :key="item.id" style="width: 10%">
+        <img alt="pokemon-logo" :src="item.imageUrl" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -9,8 +20,7 @@ import axios from "../services/axios";
 
 export default {
   name: "App",
-  components: {
-  },
+  components: {},
   data() {
     return {
       pokemons: [],
@@ -35,9 +45,15 @@ export default {
 <style scoped>
 .logo-central {
   width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
+}
+
+.card-constainer {
+  display: block;
+  flex-direction: row;
+  justify-content: center;
 }
 </style>

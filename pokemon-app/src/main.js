@@ -7,6 +7,12 @@ import Home from "./views/Home.vue";
 
 Vue.use(VueRouter);
 
+// Vuesax Component Framework
+import Vuesax from "vuesax";
+import "material-icons/iconfont/material-icons.css"; //Material Icons
+import "vuesax/dist/vuesax.css"; // Vuesax
+Vue.use(Vuesax);
+
 const routes = [{ path: "/", component: Home }];
 
 const router = new VueRouter({
